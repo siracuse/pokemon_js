@@ -1,0 +1,39 @@
+### TECHNO
+html css
+js pour le jeu
+php pour le compte et la sauvegarde du compte
+
+
+### NOTE
+pokemon 1er generation
+combat pokemon avec animation
+    data pour 3 pokemons
+        type
+        capacite
+            puissance
+
+    - type 
+        - eau / feu / feuille
+    - type d'attaque
+        - charge
+
+parcourir une map pokemon
+avec des musiques
+
+
+### OBJECTIF
+-Système de combat propre
+	- pokemon 3
+	- avec des attaques (4)
+	- type attaque 3
+	- animation
+	- musique
+
+
+# 26/01
+- rajouter une animation
+- rajouter le système de type (eau/feu/feuille), pv, vitesse, force ...
+
+
+
+

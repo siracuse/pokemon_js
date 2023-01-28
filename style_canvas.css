@@ -1,0 +1,91 @@
+#fight {
+    background-image: url('img/map_battle/fond4.png');
+    position: absolute;
+    z-index: -99;
+    width: 640px;
+    height: 600px;
+}
+
+.pokemon_battle{
+    position: relative;
+}
+
+.pokemon_battle1 {
+    left: 100px;
+    top: 280px;
+}
+
+.pokemon_battle2 {
+    left: 291px;
+    top: 47px;
+}
+
+.pokemon_attaque {
+    position: relative;
+    width: 420px;
+    height: 120px;
+    top: 326px;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-wrap: wrap;
+    border: 6px solid #706880;
+    text-transform: uppercase;
+}
+
+.pokemon_attaque_1, .pokemon_attaque_2, .pokemon_attaque_3, .pokemon_attaque_4 {
+    width: 210px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon_attaque_1:hover, .pokemon_attaque_2:hover, .pokemon_attaque_3:hover, .pokemon_attaque_4:hover {
+    cursor: pointer;
+}
+
+.pokemon_info {
+    position: relative;
+    width: 260px;
+    height: 90px;
+    background-color: #F8F8D8;
+    border: 5px solid #505050;
+    border-radius: 5px;
+    
+}
+
+.pokemon_info_1 {
+    top: 29px;
+    left: 363px;
+}
+
+.pokemon_info_2 {
+    top: -360px;
+    left: 30px;
+}
+.pokemon_info_name {
+    margin: 10px;
+    text-transform: uppercase;
+}
+.pokemon_info_1_pv {
+    width: 220px;
+    height: 10px;
+}
+
+.pokemon_info_2_pv {
+    width: 220px;
+    height: 10px;
+}
+
+.pokemon_info_pv {
+    margin: 10px auto 0 10px;
+    background-color: #70F8A8;
+    border: 3px solid white;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.pokemon_info_pv_value {
+    text-align: right;
+    margin: 6px 20px 0 0;
+}

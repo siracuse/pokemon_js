@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="style_canvas.css" rel="stylesheet">
+
+    <title>POKEMON</title>
+
+</head>
+<body>
+    <form action="">
+        <div class="choose">
+            <div class="player1_choose">
+                <select id="player1_choose" onchange="player_choose_pokemon_1()">
+                    <option value="">-- Faites votre choix --</option>
+                    <option value="bulbizarre">Bulbizarre</option>
+                    <option value="salameche">Salameche</option>
+                    <option value="carapuce">Carapuce</option>
+                </select>
+                <img id="player_choose_pokemon_img_1" src="img/pokemon_sprite/pokeball.gif" alt="">
+            </div>
+            <!-- <div class="player2_choose">
+                <select id="player2_choose" onchange="player_choose_pokemon_2()">
+                    <option value="">-- Faites votre choix --</option>
+                    <option value="bulbizarre">Bulbizarre</option>
+                    <option value="salameche">Salameche</option>
+                    <option value="carapuce">Carapuce</option>
+                </select>
+                <img id="player_choose_pokemon_img_2" src="img/pokemon_sprite/pokeball.gif" alt="">
+            </div> -->
+        </div>
+
+        <!-- <input type="submit" value="valider"> -->
+    </form>
+
+    <div id="fight" width="640" height="480">
+        <img class="pokemon_battle pokemon_battle1" id="player1_battle_pokemon" src="img/pokemon_sprite/pokeball.gif" width="150" height="150">    
+        <img class="pokemon_battle pokemon_battle2" id="player2_battle_pokemon" src="img/pokemon_sprite/pokeball.gif" width="100" height="100">
+
+
+        <div class="pokemon_attaque">
+            <div class="pokemon_attaque_1" id="pokemon_attaque_1" onclick="attaque('pokemon_attaque_1')"></div>
+            <div class="pokemon_attaque_2" id="pokemon_attaque_2" onclick="attaque('pokemon_attaque_2')"></div>
+            <div class="pokemon_attaque_3" id="pokemon_attaque_3" onclick="attaque('pokemon_attaque_3')"></div>
+            <div class="pokemon_attaque_4" id="pokemon_attaque_4" onclick="attaque('pokemon_attaque_4')"></div>
+        </div>
+
+        <div class="pokemon_info pokemon_info_1">
+            <div class="pokemon_info_name pokemon_info_1_name" id="player_info_name_1"></div>
+            <div class="pokemon_info_pv pokemon_info_1_pv" id="pokemon_info_1_pv"></div>
+            <div class="pokemon_info_pv_value" id="pokemon_info_pv_value_1"></div>     
+
+        </div>
+
+        <div class="pokemon_info pokemon_info_2">
+            <div class="pokemon_info_name pokemon_info_2_name" id="player_info_name_2"></div>
+            <div class="pokemon_info_pv pokemon_info_2_pv" id="pokemon_info_2_pv"></div>
+            <!-- <div class="pokemon_info_pv_value" id="pokemon_info_pv_value_2"></div> -->
+        </div>
+        
+    </div>
+
+    <script src="asset.js"></script>
+    <script src="Pokemon.js"></script>
+    <script src="Attaque.js"></script>
+</body>
+</html>
