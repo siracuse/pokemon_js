@@ -24,33 +24,34 @@ function player_choose_pokemon_1() {
 }
 
 
-function attaque(pokemon_attaque) {
-    
+function attaquePlayer(pokemon_attaque) {
     let attaque_name = document.getElementById(pokemon_attaque).innerText;
     let attaque1 = new Attaque(attaque_name.toLowerCase());
-    pokemon2.setNewPv(attaque1.power);
+    let pvLose = calculPvLose(attaque1, 'pokemon1')
+    pokemon2.setNewPv(pvLose);
 
     if (pokemon2.pv <= 0) {
-        endMath('pokemon_info_2_pv')
+        endMatch('pokemon_info_2_pv')
     } else {
         let newWidth = ((pokemon2.pv * 220) / pokemon2.pvMax);
         barrePv(newWidth, 'pokemon_info_2_pv')
-        attaque2();
+        attaqueBot();
     }    
 }
 
-function attaque2() {
+function attaqueBot() {
     setTimeout(
         function() {
             let random_attaque = {0 : 'a1', 1: 'a2', 2: 'a3', 3: 'a4'};
             let attaque_key = Math.floor(Math.random() * 3)
             let attaque_name = pokemon2[random_attaque[attaque_key]];
             let attaque2 = new Attaque(attaque_name.toLowerCase());
+            let pvLose = calculPvLose(attaque2, 'pokemon2')
             console.log(attaque_name);
-            pokemon1.setNewPv(attaque2.power)
+            pokemon1.setNewPv(pvLose)
 
             if (pokemon1.pv <= 0) {
-                endMath('pokemon_info_1_pv')
+                endMatch('pokemon_info_1_pv')
             } else {
                 let newWidth = ((pokemon1.pv * 220) / pokemon1.pvMax);    
                 barrePv(newWidth, 'pokemon_info_1_pv')
@@ -61,18 +62,28 @@ function attaque2() {
 
 
 
-
+function calculPvLose(attaque, pokemon) {
+    let pvLose = 0;    
+    if (pokemon == 'pokemon1') {
+        pvLose = ((((pokemon1.niveau * 0.4)+2)* pokemon1.attaque * attaque.power) / (pokemon2.defense * 50)) + 2
+    } else {
+        pvLose = ((((pokemon2.niveau * 0.4)+2)* pokemon2.attaque * attaque.power) / (pokemon1.defense * 50)) + 2
+    }
+    console.log(Math.round(pvLose))
+    return Math.round(pvLose);
+}
 
 
 
 //  USEFULL
-function endMath(pokemon) {
+function endMatch(pokemon) {
     document.getElementById('pokemon_attaque_1').style.display ='none';
     document.getElementById('pokemon_attaque_2').style.display ='none';
     document.getElementById('pokemon_attaque_3').style.display ='none';
     document.getElementById('pokemon_attaque_4').style.display ='none';
     document.getElementById(pokemon).style.width = '0px';
 }
+
 function barrePv(newWidth, pokemon) {
     newWidthToString = newWidth.toString() + 'px';
     document.getElementById(pokemon).style.width = newWidthToString;

@@ -12,35 +12,35 @@ class Attaque {
         let config;
         if (this.name == 'charge') {
             config = {
-                'power' : 5,
+                'power' : 40,
                 'type' : 'normal',
                 'precision': 100
             }
         }
         if (this.name == 'fouet lianes') {
             config = {
-                'power' : 10,
+                'power' : 45,
                 'type': 'plante',
                 'precision' : 100
             }
         }
         if (this.name == 'griffre') {
             config = {
-                'power' : 5,
+                'power' : 40,
                 'normal': 'normal',
                 'precision': 100
             }
         }
         if (this.name == 'flammèche') {
             config = {
-                'power' : 10,
+                'power' : 40,
                 'type' : 'feu',
                 'precision': 100
             }
         }
         if (this.name == 'pistolet à o') {
             config = {
-                'power' : 10,
+                'power' : 40,
                 'type': 'eau',
                 'precision': 100
             }

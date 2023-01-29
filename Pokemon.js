@@ -10,7 +10,7 @@ class Pokemon {
     vitesse = 0;
     defense = 0;
     experience = 0;
-    niveau = 0;
+    niveau = 1;
 
     
 
@@ -22,6 +22,9 @@ class Pokemon {
         this.a2 = this.setA2()
         this.a3 = this.setA3()
         this.a4 = this.setA4()
+        this.attaque = this.setAttaque()
+        this.defense = this.setDefense()
+        this.vitesse = this.setVitess()
     }
 
     setConfig() {
@@ -96,6 +99,23 @@ class Pokemon {
         let config = this.setConfig();
         this.a4 = config["a4"];
         return this.a4;
+    }
+
+    setAttaque() {
+        let config = this.setConfig();
+        this.attaque = config["attaque"];
+        return this.attaque;
+    }
+
+    setDefense() {
+        let config = this.setConfig();
+        this.defense = config["defense"];
+        return this.defense;
+    }
+    setVitess() {
+        let config = this.setConfig();
+        this.vitesse = config["vitesse"];
+        return this.vitesse;
     }
 
     setExperience(new_exp) {
