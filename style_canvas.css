@@ -3,7 +3,8 @@
     position: absolute;
     z-index: -99;
     width: 640px;
-    height: 600px;
+    height: 576px;
+    left: 250px;
 }
 
 .pokemon_battle{
@@ -22,9 +23,9 @@
 
 .pokemon_attaque {
     position: relative;
-    width: 420px;
+    width: 280px;
     height: 120px;
-    top: 326px;
+    top: 290px;
     background-color: #F8F8F8;
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +34,7 @@
 }
 
 .pokemon_attaque_1, .pokemon_attaque_2, .pokemon_attaque_3, .pokemon_attaque_4 {
-    width: 210px;
+    width: 140px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -44,27 +45,44 @@
     cursor: pointer;
 }
 
+.pokemon_fight_chat {
+    position: relative;
+    width: 342px;
+    height: 120px;
+    top: -6px;
+    left: 286px;
+    background-color: #F8F8F8;
+    border: 6px solid #706880;
+    overflow-y: scroll;
+    /* text-transform: uppercase; */
+}
+
+.pokemon_fight_chat_row {
+    margin: 8px;
+}
+
 .pokemon_info {
     position: relative;
-    width: 260px;
-    height: 90px;
     background-color: #F8F8D8;
     border: 5px solid #505050;
     border-radius: 5px;
-    
 }
 
 .pokemon_info_1 {
+    width: 260px;
+    height: 84px;
     top: 29px;
     left: 363px;
 }
 
 .pokemon_info_2 {
+    width: 260px;
+    height: 60px;
     top: -360px;
     left: 30px;
 }
 .pokemon_info_name {
-    margin: 10px;
+    margin: 7px 10px;
     text-transform: uppercase;
 }
 .pokemon_info_1_pv {

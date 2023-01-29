@@ -1,8 +1,12 @@
+body {
+    display: flex;
+}
 form {
     display: flex;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+    /* margin-right: 100px; */
 }
 
 form input {
