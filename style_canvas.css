@@ -23,9 +23,9 @@
 
 .pokemon_attaque {
     position: relative;
-    width: 280px;
+    width: 250px;
     height: 120px;
-    top: 290px;
+    top: 291px;
     background-color: #F8F8F8;
     display: flex;
     flex-wrap: wrap;
@@ -34,7 +34,7 @@
 }
 
 .pokemon_attaque_1, .pokemon_attaque_2, .pokemon_attaque_3, .pokemon_attaque_4 {
-    width: 140px;
+    width: 125px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -47,18 +47,21 @@
 
 .pokemon_fight_chat {
     position: relative;
-    width: 342px;
+    width: 372px;
     height: 120px;
-    top: -6px;
-    left: 286px;
+    top: -4px;
+    left: 257px;
     background-color: #F8F8F8;
     border: 6px solid #706880;
     overflow-y: scroll;
-    /* text-transform: uppercase; */
 }
 
 .pokemon_fight_chat_row {
     margin: 8px;
+    font-size: 14px;
+}
+.myChat {
+    color: blue;
 }
 
 .pokemon_info {

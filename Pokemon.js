@@ -25,6 +25,7 @@ class Pokemon {
         this.attaque = this.setAttaque()
         this.defense = this.setDefense()
         this.vitesse = this.setVitess()
+        this.type = this.setType()
     }
 
     setConfig() {
@@ -35,7 +36,7 @@ class Pokemon {
                 "a2" : "griffre",
                 "a3" : "fouet lianes",
                 "a4" : "griffre",
-                "type" : "feuille",
+                "type" : "plante",
                 "pv" : 45,
                 "attaque" : 49,
                 "defense" : 49,
@@ -116,6 +117,11 @@ class Pokemon {
         let config = this.setConfig();
         this.vitesse = config["vitesse"];
         return this.vitesse;
+    }
+    setType() {
+        let config = this.setConfig();
+        this.type = config["type"];
+        return this.type;
     }
 
     setExperience(new_exp) {

@@ -5,6 +5,7 @@ class Attaque {
     constructor (name) {
         this.name = name;
         this.power = this.setPower()
+        this.type = this.setType()
     }
 
 
@@ -52,5 +53,10 @@ class Attaque {
         let config = this.setConfig();
         this.power = config['power'];
         return this.power;
+    }
+    setType() {
+        let config = this.setConfig();
+        this.type = config['type'];
+        return this.type;
     }
 }
