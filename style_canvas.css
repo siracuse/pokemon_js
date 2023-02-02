@@ -97,15 +97,17 @@
     width: 220px;
     height: 10px;
 }
-
-.pokemon_info_pv {
+.pokemon_info_pv_base {
+    background-color: grey;
     margin: 10px auto 0 10px;
+    width: 220px;
+    border-radius: 5px;
+}
+.pokemon_info_pv {
     background-color: #70F8A8;
-    border: 3px solid white;
     border-radius: 5px;
     transition: 0.5s;
 }
-
 .pokemon_info_pv_value {
     text-align: right;
     margin: 6px 20px 0 0;
